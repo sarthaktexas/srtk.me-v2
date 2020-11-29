@@ -18,7 +18,6 @@ export default function RedirectPage(res) {
 RedirectPage.getInitialProps = async (ctx) => {
   if (ctx.res) {
     let slug = ctx.query.slug;
-    console.log(slug);
     if (slug[0] !== 'favicon.ico') {
       const shortUrl = slug[0];
       const params = slug.splice(1).toString().replace(/,/g, '/');
@@ -26,11 +25,12 @@ RedirectPage.getInitialProps = async (ctx) => {
         filterByFormula: `Slug = "${shortUrl}"`,
         maxRecords: 1
       });
+      let urlToRedirect = url[0].fields.destination + '/' + params;
       if (url.length) {
-        ctx.res.writeHead(303, { Location: url[0].fields.destination });
+        ctx.res.writeHead(303, { Location: urlToRedirect });
         ctx.res.end();
         return {
-          redirectUrl: url[0].fields.destination
+          redirectUrl: urlToRedirect
         }
       }
       if (!url.length) {

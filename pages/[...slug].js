@@ -34,13 +34,13 @@ RedirectPage.getInitialProps = async (ctx) => {
         }
       }
       if (!url.length) {
-        ctx.res.writeHead(302, { Location: '/404' });
+        ctx.res.writeHead(302, { Location: `/404?m=\/${slug[0]}` });
         ctx.res.end();
         return {
-          redirectUrl: '/404'
+          redirectUrl: `/404?m=\/${slug[0]}`
         }
       }
-    } else return { redirectUrl: '/404' }
+    } else return { redirectUrl: `/404?m=what%20you%27re%20looking%20for` }
   }
-  return { redirectUrl: '/404' };
+  return { redirectUrl: '/404?m=where%20you%20are' };
 }

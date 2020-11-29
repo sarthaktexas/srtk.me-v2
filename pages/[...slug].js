@@ -25,8 +25,8 @@ RedirectPage.getInitialProps = async (ctx) => {
         filterByFormula: `Slug = "${shortUrl}"`,
         maxRecords: 1
       });
-      let urlToRedirect = url[0].fields.destination + '/' + params;
       if (url.length) {
+        let urlToRedirect = url[0].fields.destination + '/' + params;
         ctx.res.writeHead(303, { Location: urlToRedirect });
         ctx.res.end();
         return {

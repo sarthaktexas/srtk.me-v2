@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 
 const AirtablePlus = require('airtable-plus');
 const airtable = new AirtablePlus({
-  baseID: 'appBvGPkuEqXTN7UM',
+  baseID: process.env.AIRTABLE_BASE_ID,
   apiKey: process.env.AIRTABLE_API_KEY,
   tableName: 'Links',
 });

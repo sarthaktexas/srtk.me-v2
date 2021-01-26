@@ -26,7 +26,7 @@ RedirectPage.getInitialProps = async (ctx) => {
         maxRecords: 1
       });
       if (url.length) {
-        let urlToRedirect = url[0].fields.destination + params ? `/${params}` : ``;
+        let urlToRedirect = url[0].fields.destination + `${params ? `/${params}` : ``}`;
         ctx.res.writeHead(303, { Location: urlToRedirect });
         ctx.res.end();
         return {

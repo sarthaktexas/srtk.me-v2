@@ -21,6 +21,7 @@
 ```
 
 The Airtable used must be formatted as shown above. There may be other columns, but the first two must be `Slug` and `Destination`.
+Also **the table name must be `Links`**.
 > Note the Capitalization!
 
 `Slug` is the end URL you'd like to redirect from.

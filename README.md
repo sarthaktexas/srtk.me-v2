@@ -10,7 +10,7 @@
 ## Airtable Setup:
 ```
 ╔══════════╦══════════════════════╗
-║ Slug     ║ Destination          ║
+║ slug     ║ destination          ║
 ╠══════════╬══════════════════════╣
 ║ website  ║ https://srtk.me      ║
 ╠══════════╬══════════════════════╣
@@ -20,12 +20,12 @@
 ╚══════════╩══════════════════════╝
 ```
 
-The Airtable used must be formatted as shown above. There may be other columns, but the first two must be `Slug` and `Destination`.
-Also **the table name must be `Links`**.
+The Airtable used must be formatted as shown above. There may be other columns, but the first two must be `slug` and `destination` (lowercase).
+Also **the table name must be `Links`** (capital L).
 > Note the Capitalization!
 
-`Slug` is the end URL you'd like to redirect from.
-`Destination` is the end URL that you'd like to redirect to.
+`slug` is the end URL you'd like to redirect from.
+`destination` is the end URL that you'd like to redirect to.
 
 > in the example above, the slug *website* means the user would go to /website and get redirected to the destination *https://srtk.me*
 

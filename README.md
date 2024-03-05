@@ -1,4 +1,6 @@
-# Link Shortener
+# This no longer works.
+
+## Link Shortener
 ![](https://og-cards.sarthakmohanty.vercel.app/Link%20Shortener.png?theme=dark&md=1&fontSize=200px)
 ![GitHub](https://img.shields.io/github/license/sarthaktexas/srtk.me-v2)
 ![GitHub issues](https://img.shields.io/github/issues/sarthaktexas/srtk.me-v2)
